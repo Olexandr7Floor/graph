@@ -1,0 +1,12 @@
+digraph {
+	rankdir=LR
+	god [fillcolor="#fde724" fontcolor=black href="https://www.google.ru/search?q=%22god%22" priority=1000 style=filled z=2]
+	moses [fillcolor="#20908c" fontcolor=white href="https://www.google.ru/search?q=%22moses%22" priority=1000 style=filled z=2]
+	joshua [fillcolor="#414186" fontcolor=white href="https://www.google.ru/search?q=%22joshua%22" priority=1000 style=filled z=2]
+	"the israelites" [fillcolor="#472878" fontcolor=white href="https://www.google.ru/search?q=%22the israelites%22" priority=1000 style=filled z=2]
+	god -> moses [URL="https://www.google.com/search?q=god-moses" layer=back penwidth=1 style=""]
+	god -> joshua [URL="https://www.google.com/search?q=god-joshua" layer=back penwidth=1 style=""]
+	moses -> "the israelites" [URL="https://www.google.com/search?q=moses-the israelites" layer=back penwidth=1 style=""]
+	joshua -> "the israelites" [URL="https://www.google.com/search?q=joshua-the israelites" layer=back penwidth=2 style=""]
+	moses -> joshua [URL="https://www.google.com/search?q=moses-joshua" layer=back penwidth=1 style=""]
+}

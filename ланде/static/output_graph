@@ -1,0 +1,17 @@
+digraph {
+	rankdir=LR
+	moses [label="moses
+Mentions: 13" fillcolor="#20908c" href="https://www.google.ru/search?q=%22moses%22" priority=1000 style=filled z=2]
+	joshua [label="joshua
+Mentions: 5" fillcolor="#414186" href="https://www.google.ru/search?q=%22joshua%22" priority=1000 style=filled z=2]
+	god [label="god
+Mentions: 26" fillcolor="#fde724" href="https://www.google.ru/search?q=%22god%22" priority=1000 style=filled z=2]
+	"the israelites" [label="the israelites
+Mentions: 3" fillcolor="#472878" href="https://www.google.ru/search?q=%22the israelites%22" priority=1000 style=filled z=2]
+	moses -> joshua [URL="https://www.google.com/search?q=moses-joshua" layer=back penwidth=1 style=""]
+	god -> moses [URL="https://www.google.com/search?q=god-moses" layer=back penwidth=1 style=""]
+	god -> joshua [URL="https://www.google.com/search?q=god-joshua" layer=back penwidth=1 style=""]
+	moses -> "the israelites" [URL="https://www.google.com/search?q=moses-the israelites" layer=back penwidth=1 style=""]
+	joshua -> "the israelites" [URL="https://www.google.com/search?q=joshua-the israelites" layer=back penwidth=2 style=""]
+	fontsize=12 label="Network Clustering Coefficient: 0.6667"
+}

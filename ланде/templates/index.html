@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Analysis</title>
+    <style>
+        /* Опціонально: визначення стилів для вашої сторінки */
+    </style>
+</head>
+<body>
+    <div style="float: left; width: 48%; margin-right: 2%;">
+        <!-- Гістограма частот -->
+        <img src="{{ graph_info.histogram_image }}" alt="Node Mentions Histogram">
+    </div>
+
+    <div style="float: right; width: 48%; margin-left: 2%;">
+        <!-- Візуалізація графу -->
+        <img src="{{ graph_info.graph_image }}" alt="Graph Visualization">
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <!-- Інші параметри -->
+    <h2>Network Clustering Coefficient: {{ graph_info.network_clustering_coefficient }}</h2>
+    <h2>Діаметр графа: {{ graph_info.diameter }}</h2>
+    <h2>Середня довжина найкоротших шляхів: {{ graph_info.average_shortest_path_length }}</h2>
+
+    <!-- Додайте інші параметри, які ви хочете відображати -->
+
+    <!-- Список кластерних коефіцієнтів вузлів -->
+    <h2>Список кластерних коефіцієнтів вузлів:</h2>
+    <ul>
+        {% for node, coefficient in graph_info.sorted_clustering_coefficient_list %}
+            <li>{{ node }}: {{ coefficient }}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
